@@ -194,10 +194,9 @@ Fórmula:
 =TEXTJOIN(CARACT(10);VERDADEIRO;
 MAP(P2:S2;LAMBDA(c;
 SE(c="";"";TEXTJOIN(CARACT(10);VERDADEIRO;
-SPLIT(REGEXREPLACE(c;", \(EF";"♦(EF");"♦")
+SPLIT(REGEXREPLACE(c;", (\((EF|EM))";"♦$1");"♦")
 ))
 ))
-)
 )
 ```
 ***Observação: Troque P2:S2 pelas células reais da sua planilha***
@@ -252,10 +251,9 @@ Fórmula:
 =TEXTJOIN(CARACT(10);VERDADEIRO;
 MAP(V2:Y2;LAMBDA(c;
 SE(c="";"";TEXTJOIN(CARACT(10);VERDADEIRO;
-SPLIT(REGEXREPLACE(c;", \(EF";"♦(EF");"♦")
+SPLIT(REGEXREPLACE(c;", (\((EF|EM))";"♦$1");"♦")
 ))
 ))
-)
 )
 ```
 
@@ -603,7 +601,7 @@ O script identifica:
 
 Em seguida, aguarda a conclusão do Autocrat.
 
-O tempo máximo de espera configurado é de 30 segundos, com verificações realizadas a cada segundo.
+O tempo máximo de espera configurado é de 30 segundos, com verificações realizadas a cada meio segundo.
 
 Quando o status indica sucesso e o endereço do documento está disponível, o script chama `processarDocumento(link)`.
 
@@ -779,13 +777,13 @@ Caso necessário, é possível testar a formatação utilizando um documento já
 
 Abra o documento no Google Docs e observe o endereço exibido no navegador. Ele possui uma estrutura semelhante a esta:
 
-`https://docs.google.com/document/d/1FUwv7ZPNQqQ45Phn1h4MQBLdZnTdWhJwoPIqy0rEZ-Y/edit?tab=t.0`
+`https://docs.google.com/document/d/16wxO980bIHBGj3rXxpvO3cqLc7LxWoGeJNjb4haMrC4/edit?tab=t.0`
 
 O ID é o trecho localizado entre `/d/` e a próxima `/`.
 
 No exemplo acima, o ID seria:
 
-`1FUwv7ZPNQqQ45Phn1h4MQBLdZnTdWhJwoPIqy0rEZ-Y`
+`16wxO980bIHBGj3rXxpvO3cqLc7LxWoGeJNjb4haMrC4`
 
 Esse código deve ser utilizado na função de teste do script.
 
@@ -797,4 +795,4 @@ O código do formatador automático é de autoria do desenvolvedor e será dispo
 
 Os conteúdos curriculares utilizados como referência devem ser identificados conforme sua fonte original, incluindo o Currículo Base do Território Catarinense (CBTC).
 
-As instruções de montagem, fórmulas e configurações serão documentadas para permitir que outros professores reproduzam e adaptem o sistema.
+As instruções de montagem, fórmulas e configurações estão documentadas para permitir que outros professores reproduzam e adaptem o sistema.
