@@ -779,13 +779,13 @@ Caso necessário, é possível testar a formatação utilizando um documento já
 
 Abra o documento no Google Docs e observe o endereço exibido no navegador. Ele possui uma estrutura semelhante a esta:
 
-`https://docs.google.com/document/d/1AbCdEfGhIjKlMnOpQrStUvWxYz123456789/edit`
+`https://docs.google.com/document/d/1FUwv7ZPNQqQ45Phn1h4MQBLdZnTdWhJwoPIqy0rEZ-Y/edit?tab=t.0`
 
 O ID é o trecho localizado entre `/d/` e a próxima `/`.
 
 No exemplo acima, o ID seria:
 
-`1AbCdEfGhIjKlMnOpQrStUvWxYz123456789`
+`1FUwv7ZPNQqQ45Phn1h4MQBLdZnTdWhJwoPIqy0rEZ-Y`
 
 Esse código deve ser utilizado na função de teste do script.
 
