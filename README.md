@@ -713,11 +713,83 @@ Execute novamente `configurarAutomacao()`. Se o gatilho já existir, a função 
 
 ## 3. Adaptação para outras disciplinas
 
-*Documentação pendente.*
+O sistema pode ser utilizado em diferentes disciplinas, desde que alguns elementos sejam adaptados conforme as necessidades de cada componente curricular.
+
+Para criar uma versão para outra disciplina, recomenda-se duplicar o conjunto de referência, composto pelo formulário, pela planilha, pelo modelo de documento e pela pasta de saída.
+
+As principais adaptações necessárias são:
+
+- **Formulário:** atualizar as opções de objetos de conhecimento, habilidades e demais informações específicas da disciplina.
+- **Planilha:** ajustar as fórmulas caso as perguntas estejam em posições diferentes e preencher a aba "Habilidades e Critérios" com as habilidades e os respectivos critérios de avaliação da disciplina.
+- **Modelo de documento:** utilizar o planejamento específico da disciplina, respeitando suas particularidades e campos obrigatórios.
+- **Autocrat:** selecionar o novo modelo, conferir as associações entre as tags e as colunas da planilha e ajustar os nomes dos arquivos e a pasta de destino.
+
+A tabela "Habilidades e Critérios" é especialmente importante: cada disciplina deve possuir sua própria relação de habilidades e critérios de avaliação, contemplando os anos escolares em que é ofertada.
+
+Não é necessário preencher pares de colunas referentes a anos que não fazem parte da disciplina.
+
+***Observação: Algumas disciplinas tem Recomposição das Aprendizagens
 
 ## 4. Solução de problemas gerais
 
-*Documentação pendente.*
+A seguir estão alguns problemas que podem ocorrer durante a utilização ou configuração do sistema e suas possíveis soluções.
+
+### 4.1. A planilha não está organizando habilidades, critérios ou outras informações corretamente
+
+Verifique se as fórmulas estão inseridas na linha correta e se as referências às colunas correspondem à estrutura da planilha.
+
+A primeira linha deve conter os nomes que identificam cada coluna, enquanto as fórmulas devem começar na segunda linha.
+
+Se a planilha já possuir respostas de testes ou preenchimentos anteriores, recomenda-se excluir as linhas de respostas pela opção de exclusão de linhas, preservando a primeira linha com os cabeçalhos.
+
+Sempre que possível, dê preferência a uma planilha ainda sem respostas. Insira as fórmulas na linha 2 e certifique-se de que elas sejam aplicadas também às linhas seguintes.
+
+### 4.2. O Autocrat não está funcionando
+
+Confira os seguintes itens:
+
+- Se o Autocrat possui as permissões necessárias para acessar os arquivos e executar as operações.
+- Se o Job foi configurado corretamente.
+- Se a opção **Run on form trigger** está ativada.
+- Se o modelo selecionado está no formato Google Docs.
+- Se a pasta de destino existe e está acessível.
+- Se todas as tags do modelo foram associadas às colunas corretas da planilha.
+
+### 4.3. Os e-mails não estão sendo enviados
+
+Confira as tags utilizadas na configuração de envio do Autocrat.
+
+As tags devem corresponder exatamente aos nomes das colunas selecionadas na configuração. Caso o nome de uma coluna seja muito extenso ou contenha caracteres que dificultem sua utilização, pode ser simplificado, desde que a associação seja atualizada no Autocrat.
+
+As tags sugeridas neste documento já seguem um padrão testado no modelo de referência.
+
+**Uma dica importante:** procure as colunas de status do Autocrat na planilha, normalmente localizadas entre as últimas colunas. Elas registram o resultado da execução do Job, indicando se o documento foi gerado e se houve algum erro.
+
+Quando ocorre uma falha, a própria mensagem de status geralmente informa o motivo, ajudando a identificar o que precisa ser corrigido.
+
+### 4.4. O documento não está recebendo a formatação automática
+
+Verifique se o gatilho do Google Apps Script foi configurado corretamente para ser executado quando uma nova resposta for enviada pelo formulário.
+
+Também confira se o script está recebendo o endereço correto do documento gerado pelo Autocrat. O endereço é utilizado para localizar o arquivo e aplicar a formatação.
+
+Caso necessário, é possível testar a formatação utilizando um documento já gerado.
+
+**Como localizar o ID de um documento:**
+
+Abra o documento no Google Docs e observe o endereço exibido no navegador. Ele possui uma estrutura semelhante a esta:
+
+`https://docs.google.com/document/d/1AbCdEfGhIjKlMnOpQrStUvWxYz123456789/edit`
+
+O ID é o trecho localizado entre `/d/` e a próxima `/`.
+
+No exemplo acima, o ID seria:
+
+`1AbCdEfGhIjKlMnOpQrStUvWxYz123456789`
+
+Esse código deve ser utilizado na função de teste do script.
+
+**Atenção:** o documento utilizado no teste precisa seguir a mesma estrutura do modelo de planejamento utilizado pelo sistema, incluindo as tabelas e os títulos dos campos esperados pelo formatador. Um documento diferente poderá apresentar erros ou simplesmente não receber a formatação corretamente.
 
 ## 5. Autoria e licenciamento
 
