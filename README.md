@@ -3,7 +3,7 @@ Formata planejamentos mensais usando api do Google Docs, negritando códigos de 
 
 # Guia de instalação e utilização do sistema de planejamento pedagógico
 
-**Status:** documentação em construção  
+**Status:** documentação em atualização
 **Projeto:** geração e formatação automática de planejamentos pedagógicos
 
 ## 1. Visão geral
@@ -39,7 +39,7 @@ Entre as informações solicitadas estão:
 - Nome completo do professor responsável pelo planejamento.
 - Endereço de e-mail do professor.
 - Endereços de e-mail dos segundos professores, quando houver. Esse preenchimento é opcional e permite que eles também recebam uma cópia do planejamento.
-- Escola em que o planejamento será aplicado. Essa informação permite que a equipe pedagógica da unidade escolar também receba o documento para conferência, facilitando o acompanhamento pela Assessoria Técnico-Pedagógica (ATP) e pela gestão escolar.
+- Escola em que o planejamento será aplicado. Essa informação permite que a equipe pedagógica da unidade escolar também receba o documento para conferência, facilitando o acompanhamento pelo(a) Assistente Técnico-Pedagógico(a) (ATP) e pela gestão escolar.
 - Ano e turma.
 - Objetos de conhecimento e conteúdos que serão trabalhados.
 - Habilidades específicas da disciplina.
@@ -50,7 +50,7 @@ Entre as informações solicitadas estão:
 
 **Organização do formulário**
 
-As perguntas são organizadas em seções para facilitar o preenchimento. O professor não precisa avançar manualmente entre todas elas: a passagem de uma seção para outra acontece automaticamente.
+As perguntas são organizadas em seções para facilitar o preenchimento. O professor deve avançar ao fim do preenchimento de cada seção. As seções por turmas avançam automaticamente, pois usam "Ir para seção com base na resposta".
 
 A maior parte das informações é selecionada a partir de opções previamente cadastradas. Isso evita que o professor precise digitar informações que já fazem parte do currículo ou que poderiam ser selecionadas de uma lista.
 
