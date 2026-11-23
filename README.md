@@ -500,10 +500,10 @@ Permite que os destinatários compartilhem o documento com outras pessoas.
 
 Informe os destinatários utilizando as tags correspondentes:
 
-<<Endereço de e-mail>>,
+`<<Endereço de e-mail>>,
 <<E-mail Pedagógico da Escola:>>,
 <<E-mail do Segundo Professor:>>,
-<<E-mail do Professor Hora-atividade:>>
+<<E-mail do Professor Hora-atividade:>>`
 
 Dessa forma, o documento será encaminhado ao professor responsável, à equipe pedagógica da escola e aos demais profissionais informados no formulário.
 
@@ -728,7 +728,7 @@ A tabela "Habilidades e Critérios" é especialmente importante: cada disciplina
 
 Não é necessário preencher pares de colunas referentes a anos que não fazem parte da disciplina.
 
-***Observação: Algumas disciplinas tem Recomposição das Aprendizagens
+***Observação: Algumas disciplinas tem Recomposição das Aprendizagens e IFAs. Nesse caso talvez seja necessário criar uma nova coluna para fazer as relações corretamente.***
 
 ## 4. Solução de problemas gerais
 
